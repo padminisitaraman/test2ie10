@@ -29,14 +29,13 @@ namespace test1e10
                 HttpCookie cookie = new HttpCookie("cook", "nochicken");
                 cookie.Secure = true;
                 Response.Cookies.Add(cookie);
-                
+                Response.Redirect("~/default.aspx");
             }
             else
             {
-                HttpCookie cookie = new HttpCookie("cook", "chicken");
-                cookie.Secure = true;
-                Response.Cookies.Add(cookie);
-                Response.Redirect("~/default.aspx");
+                
+                Response.Write("cook available");
+                Response.End();
                 
             }
            
