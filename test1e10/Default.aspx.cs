@@ -22,8 +22,8 @@ namespace test1e10
             {
                 Session["refirected"] = true;
                 string indexpath = Request.Url.ToString();
-                indexpath = "https://ieefix.apphb.com/about.aspx";
-                //indexpath = "http://192.50.51.165/test1e10/about.aspx";
+               // indexpath = "https://ieefix.apphb.com/about.aspx";
+                indexpath = "http://192.50.51.165/test1e10/about.aspx";
                 Response.Write(string.Format("<script type=text/javascript>top.location.href='{0}?sid={1}&fid={2}'</script>", indexpath, Session.SessionID, "chicken"));
                 Response.End();
 
@@ -32,8 +32,8 @@ namespace test1e10
             {
 
                 Response.Write(Request.UserAgent);
-                Response.Redirect("https://ieefix.apphb.com/Index.aspx");
-                //Response.Redirect("~/Index.aspx");
+                //Response.Redirect("https://ieefix.apphb.com/Index.aspx");
+                Response.Redirect("~/Index.aspx");
             }
         }
     }

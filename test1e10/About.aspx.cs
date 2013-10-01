@@ -20,7 +20,7 @@ namespace test1e10
             if (Request["fid"] != null && Convert.ToString(Request["fid"]).Length > 0)
             {
                 HttpCookie fidcookie = new HttpCookie("fid", Convert.ToString(Request["fid"]));
-                fidcookie.Secure = true;
+               // fidcookie.Secure = true;
                 Response.Cookies.Add(fidcookie);
             }
 

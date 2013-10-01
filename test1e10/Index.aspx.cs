@@ -12,6 +12,11 @@ namespace test1e10
         protected void Page_Load(object sender, EventArgs e)
         {
             Response.Write("Cookies");
+            Response.Write(Request.Cookies.Count);
+            if (Request.Cookies.Count > 0)
+                Response.Write(Request.Cookies[0].Value);
+            if (Request.Cookies.Count > 1)
+                Response.Write(Request.Cookies[1].Value);
             //foreach (HttpCookie cook in Request.Cookies)
             //{
             //    Response.Write("cookName" + cook.Name);
