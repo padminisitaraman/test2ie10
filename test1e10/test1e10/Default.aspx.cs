@@ -31,8 +31,7 @@ namespace test1e10
                 Response.Write(Session["refirected"]);
                 Session["refirected"] = "";
                 Response.Write(Request.UserAgent);
-                Response.Write("session persisted");
-                Response.End();
+                Response.Redirect("~/Index.aspx");
             }
         }
     }

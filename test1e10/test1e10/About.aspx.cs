@@ -16,29 +16,17 @@ namespace test1e10
             {
                 Response.Cookies.Add(new HttpCookie("ASP.NET_SessionId", Convert.ToString(Request["sid"])));
             }
-           // Request.Headers.Add("p3p", "CP='NOI ADM DEV PSAi COM NAV OUR OTR STP IND DEM'");
+            // Request.Headers.Add("p3p", "CP='NOI ADM DEV PSAi COM NAV OUR OTR STP IND DEM'");
             if (Request["fid"] != null && Convert.ToString(Request["fid"]).Length > 0)
             {
                 HttpCookie fidcookie = new HttpCookie("fid", Convert.ToString(Request["fid"]));
                 fidcookie.Secure = true;
                 Response.Cookies.Add(fidcookie);
             }
-            if (Request.Cookies["cook"] == null)
-            {
 
-                HttpCookie cookie = new HttpCookie("cook", "nochicken");
-                cookie.Secure = true;
-                Response.Cookies.Add(cookie);
-                Response.Redirect("~/default.aspx");
-            }
-            else
-            {
-                
-                Response.Write("cook available");
-                Response.End();
-                
-            }
-           
+            Response.Redirect("http://apps.facebook.com/sbhbdevin");
+
+
         }
     }
 }
