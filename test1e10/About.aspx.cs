@@ -24,7 +24,7 @@ namespace test1e10
                 Response.Cookies.Add(fidcookie);
             }
 
-            Response.Redirect("http://apps.facebook.com/sbhbdevin");
+            Response.Redirect("http://apps.facebook.com/sbhbdevin/");
 
 
         }
